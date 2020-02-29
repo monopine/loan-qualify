@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap");
+
+/* Use base-10 for rem units */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
