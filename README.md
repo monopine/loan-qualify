@@ -1,7 +1,7 @@
 ## Summary
 _Loan Qualify_ simulates applying for an auto-loan<br />
 It's built on top of the base scaffolding for Create React App.<br />
-It uses Formik, and Yup for forms and validation. Reach Router is used to navigate between views.
+It uses [Formik](https://github.com/jaredpalmer/formik), and [Yup](https://github.com/jquense/yup) for forms and validation. [Reach Router](https://reach.tech/router) is used to navigate between views.
 
 ## Installation and Usage
 
