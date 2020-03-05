@@ -89,7 +89,7 @@ function registerForm(props) {
                 id="password"
                 name="password"
                 placeholder="password"
-                type="text"
+                type="password"
               />
             </div>
             {errors.password && touched.password && (
@@ -110,7 +110,7 @@ function registerForm(props) {
                 id="confirmPassword"
                 name="confirmPassword"
                 placeholder="confirm password"
-                type="text"
+                type="password"
               />
             </div>
             {errors.confirmPassword && touched.confirmPassword && (
