@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+
+import mockAPI from "./mock-api";
 
 const SignupSchema = Yup.object().shape({
   purchasePrice: Yup.number()
@@ -27,34 +29,6 @@ const SignupSchema = Yup.object().shape({
 });
 
 function SignUpForm() {
-  // Setup state for API reference
-  const [criteria, setCriteria] = useState("");
-
-  // Query the moch API for the acceptance criteria
-  useEffect(() => {
-    async function queryAPI() {
-      const response = await fetch("http://localhost:3000/api.json");
-      const parsedResponse = await response.json();
-      setCriteria(parsedResponse);
-    }
-    queryAPI();
-  }, []);
-
-  function qualifyApplication(submittal) {
-    if (
-      // Acceptance criteria #1 - Purchase price as a ratio of income
-      submittal.purchasePrice >
-      submittal.yearlyIncome * criteria.incomeRatio
-    ) {
-      console.log("Not enough income");
-    } else if (submittal.creditScore < 600) {
-      // Acceptance criteria #2 - Minimum Credit Score
-      console.log("Credit score too low");
-    } else {
-      console.log("approved");
-    }
-  }
-
   return (
     <>
       <Formik
@@ -67,7 +41,7 @@ function SignUpForm() {
         }}
         validationSchema={SignupSchema}
         onSubmit={submittal => {
-          qualifyApplication(submittal);
+          mockAPI(submittal);
         }}
         validateOnChange={false}
         validateOnBlur={false}
@@ -95,9 +69,7 @@ function SignUpForm() {
             <div className="field-group">
               <label htmlFor="autoMake">Auto Make</label>
               <div
-                className={
-                  errors.purchasePrice && touched.purchasePrice ? "-error" : ""
-                }
+                className={errors.autoMake && touched.autoMake ? "-error" : ""}
               >
                 <Field
                   id="autoMake"
@@ -114,7 +86,7 @@ function SignUpForm() {
               <label htmlFor="autoModel">Auto Model</label>
               <div
                 className={
-                  errors.purchasePrice && touched.purchasePrice ? "-error" : ""
+                  errors.autoModel && touched.autoModel ? "-error" : ""
                 }
               >
                 <Field
