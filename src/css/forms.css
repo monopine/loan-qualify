@@ -16,7 +16,7 @@ input[type="number"] {
 }
 
 button[type="submit"] {
-  align-self: self-end;
+  align-self: center;
   background: #74cc74;
   border: 1px solid #74cc74;
   border-radius: 0.4rem;
@@ -33,6 +33,7 @@ button[type="submit"]:hover {
 
 label {
   font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .form-copy {
@@ -43,8 +44,8 @@ label {
 .qualification-form {
   display: flex;
   flex-direction: column;
-  max-width: 64rem;
   margin: 2rem 0;
+  max-width: 64rem;
 }
 
 .-currency {
@@ -70,4 +71,14 @@ label {
 
 .-error input {
   background: #ff000014;
+}
+
+@media (min-width: 768px) {
+  button[type="submit"] {
+    align-self: self-end;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
 }
