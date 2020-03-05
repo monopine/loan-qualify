@@ -6,8 +6,8 @@ It uses Formik, and Yup for forms and validation. Reach Router is used to naviga
 ## Installation and Usage
 
 1. Clone the repo
-2. `npm install`
-3. `npm yarn start`
+2. `yarn install`
+3. `yarn start`
 4. Navigate to http://localhost:3000
 
 Due to the mock API interace, _Loan Qualify_ will only function correctly if run locally, at localhost:3000. To reconfigure the app `mock-api.js` can be updated to fetch a resource elsewhere.
