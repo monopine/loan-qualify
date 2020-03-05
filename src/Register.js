@@ -7,7 +7,9 @@ function Register(props) {
     <>
       <h1>Your Application has been approved</h1>
       <p>Please register for a new account</p>
-      <RegisterForm submission={props.location.state.submission} />
+      {props.location.state && (
+        <RegisterForm submission={props.location.state.submission} />
+      )}
     </>
   );
 }
