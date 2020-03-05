@@ -5,6 +5,8 @@ It uses Formik, and Yup for forms and validation. Reach Router is used to naviga
 
 ## Installation and Usage
 
+Note: This application requires yarn to install and manage dependencies. Please see [https://classic.yarnpkg.com/en/docs/install/](https://classic.yarnpkg.com/en/docs/install/) for installation instructions
+
 1. Clone the repo
 2. `yarn install`
 3. `yarn start`
@@ -31,8 +33,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
