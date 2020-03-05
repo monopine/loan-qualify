@@ -40,7 +40,7 @@ label {
   text-align: center;
 }
 
-.signup-form {
+.qualification-form {
   display: flex;
   flex-direction: column;
   max-width: 64rem;

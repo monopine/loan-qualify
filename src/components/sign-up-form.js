@@ -63,7 +63,7 @@ function SignUpForm(props) {
         validateOnBlur={false}
       >
         {({ errors, touched, validateForm }) => (
-          <Form className="signup-form">
+          <Form className="qualification-form">
             <div className="field-group">
               <label htmlFor="purchasePrice">Auto Purchase Price</label>
               <div
