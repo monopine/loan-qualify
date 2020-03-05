@@ -2,9 +2,9 @@ import React from "react";
 
 import SignUpForm from "./components/sign-up-form";
 
-function Landing() {
+function Landing(props) {
   return (
-    <div className="page-wrap">
+    <>
       <div className="page-heading">
         <h1>Loan Qualification</h1>
         <p>
@@ -14,7 +14,7 @@ function Landing() {
           eveniet reiciendis atque. Molestias consectetur quas sequi!
         </p>
       </div>
-      <SignUpForm />
+      <SignUpForm navigate={props.navigate} />
       <div className="page-footer">
         <div className="disclosure">
           <h5 className="title">Disclosures</h5>
@@ -27,7 +27,7 @@ function Landing() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

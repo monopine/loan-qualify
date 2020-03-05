@@ -20,7 +20,7 @@ async function qualifyApplication(submittal) {
     // Acceptance criteria #3 - Max Purchase Price
     return "Disqualifying message, code #3";
   } else {
-    return "true";
+    return true;
   }
 }
 

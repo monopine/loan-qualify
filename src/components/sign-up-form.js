@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
@@ -28,14 +29,16 @@ const SignupSchema = Yup.object().shape({
     .required("Please enter your credit score")
 });
 
-function SignUpForm() {
+function SignUpForm(props) {
   function checkResponse(submittal) {
     mockAPI(submittal)
       .then(responseObject => {
+        // Navigate to a new page based on denial or acceptance from the API
+        console.log(responseObject);
         if (responseObject !== true) {
-          console.log(responseObject);
+          props.navigate("/deny/", { state: { message: responseObject } });
         } else {
-          window.alert("signup");
+          props.navigate("/register/");
         }
       })
       .catch(e => {
