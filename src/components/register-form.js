@@ -37,9 +37,15 @@ const RegisterSchema = Yup.object().shape({
     })
 });
 
-function registerForm() {
+function registerForm(props) {
   function submitResponse(submission) {
-    console.log(submission);
+    // To keep things simple, let's just log the submission and the initial application data, to the console
+    const applicationData = {
+      application: props,
+      registration: submission
+    };
+
+    console.table(applicationData);
   }
 
   return (

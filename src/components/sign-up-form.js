@@ -34,11 +34,10 @@ function SignUpForm(props) {
     mockAPI(submittal)
       .then(responseObject => {
         // Navigate to a new page based on denial or acceptance from the API
-        console.log(responseObject);
         if (responseObject !== true) {
           props.navigate("/deny/", { state: { message: responseObject } });
         } else {
-          props.navigate("/register/");
+          props.navigate("/register/", { state: { submission: submittal } });
         }
       })
       .catch(e => {
