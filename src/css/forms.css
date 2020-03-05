@@ -76,7 +76,7 @@ label {
 
 @media (min-width: 768px) {
   button[type="submit"] {
-    align-self: self-end;
+    align-self: flex-end;
   }
 
   label {
