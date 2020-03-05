@@ -29,6 +29,19 @@ const SignupSchema = Yup.object().shape({
 });
 
 function SignUpForm() {
+  function checkResponse(submittal) {
+    mockAPI(submittal)
+      .then(responseObject => {
+        if (responseObject !== true) {
+          console.log(responseObject);
+        } else {
+          window.alert("signup");
+        }
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
   return (
     <>
       <Formik
@@ -41,7 +54,7 @@ function SignUpForm() {
         }}
         validationSchema={SignupSchema}
         onSubmit={submittal => {
-          mockAPI(submittal);
+          checkResponse(submittal);
         }}
         validateOnChange={false}
         validateOnBlur={false}
