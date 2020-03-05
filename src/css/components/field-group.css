@@ -1,0 +1,22 @@
+.field-group {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.field-group .error {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: -2rem;
+}
+
+@media (min-width: 768px) {
+  .field-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

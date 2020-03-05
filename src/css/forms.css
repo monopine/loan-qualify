@@ -1,1 +1,73 @@
 /* Forms */
+input:focus {
+  outline: 2px solid #4abf72;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  height: 3rem;
+  line-height: 1.2;
+  padding: 0.25rem 1rem 0.25rem 2.2rem;
+  position: relative;
+  width: 22rem;
+}
+
+button[type="submit"] {
+  align-self: self-end;
+  background: #74cc74;
+  border: 1px solid #74cc74;
+  border-radius: 0.4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem 4rem;
+}
+
+button[type="submit"]:hover {
+  background: #489948;
+  border-color: #489948;
+  cursor: pointer;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+.form-copy {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 64rem;
+  margin: 2rem 0;
+}
+
+.-currency {
+  position: relative;
+}
+
+.-currency:before {
+  color: #5a5c5e;
+  content: "$";
+  display: inline-block;
+  font-size: 1.4rem;
+  left: 1.3rem;
+  line-height: 1;
+  margin-top: -0.7rem;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.error {
+  color: red;
+}
+
+.-error input {
+  background: #ff000014;
+}
