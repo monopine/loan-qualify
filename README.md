@@ -25,3 +25,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+## Installation and Usage
+
+1. Clone the repo
+2. `npm install`
+3. `npm yarn start`
+4. Navigate to http://localhost:3000
